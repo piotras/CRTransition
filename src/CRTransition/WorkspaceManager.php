@@ -1,5 +1,7 @@
 <?php
 
+namespace CRTransition;
+
 interface WorkspaceManager 
 {
     

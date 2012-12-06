@@ -1,5 +1,7 @@
 <?php
 
+namespace CRTransition;
+
 interface StorableWorkspace extends Storable 
 {
     /**

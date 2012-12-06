@@ -1,8 +1,9 @@
 <?php
 
+namespace CRTransition;
+
 interface Transition
 {
-    
     /**
      * Get content manager
      */
