@@ -83,7 +83,7 @@ class WorkspaceTest extends RakiTest
         $paths = $rf->getWorkspacePaths();
         foreach ($paths as $path) {
             $ws = $this->manager->getStoredWorkspaceByPath($path);
-            $this->assertInstanceOf(StorableWorkspace, $ws); 
+            $this->assertInstanceOf(\CRTransition\StorableWorkspace, $ws); 
         }
     }
 
@@ -93,7 +93,7 @@ class WorkspaceTest extends RakiTest
         $names = $rf->getWorkspaceNames();
         foreach ($names as $name) {
             $ws = $this->manager->getStoredWorkspaceByName($name);
-            $this->assertInstanceOf(StorableWorkspace, $ws);
+            $this->assertInstanceOf(\CRTransition\StorableWorkspace, $ws);
         }
     }
 }
