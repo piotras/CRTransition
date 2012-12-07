@@ -1,7 +1,5 @@
 <?php
 
-require_once 'ResultFixture.php';
-
 class WorkspaceTest extends RakiTest 
 {
     private $manager = null;
