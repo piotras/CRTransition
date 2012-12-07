@@ -14,10 +14,10 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "lespoilus/spyc": "dev-master"
+        "lespoilus/spyc": "*"
     },
     "require-dev": {
-        "lespoilus/spyc": "dev-master"
+        "lespoilus/spyc": "*"
     },
     "autoload": {
         "psr-0": {
