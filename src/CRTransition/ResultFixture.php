@@ -19,7 +19,7 @@ class ResultFixture
     public function __construct($yamlFile, $name)
     {
         $this->testName = $name;
-        $this->yaml = Spyc::YAMLLoad($yamlFile);  
+        $this->yaml = \Spyc::YAMLLoad($yamlFile);  
     }
 
     private function getYamlKeyByName($name)
