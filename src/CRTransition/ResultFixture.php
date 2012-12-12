@@ -58,7 +58,7 @@ class ResultFixture
         $items = $this->getYamlTypeKeyByName(self::WORKSPACE, self::ITEMS); 
         if (!isset($items)) {
             if (!is_array($items)) {
-                throw new Exception("No items defined for '{$path}' workspace");
+                throw new \Exception("No items defined for '{$path}' workspace");
             }
         }
         if (!isset($items[$path])) {
@@ -72,7 +72,7 @@ class ResultFixture
         $items = $this->getYamlTypeKeyByName(self::WORKSPACE, self::ITEMS); 
         if (!isset($items)) {
             if (!is_array($items)) {
-                throw new Exception("No items defined for '{$path}' workspace");
+                throw new \Exception("No items defined for '{$path}' workspace");
             }
         }
         if (!isset($items[$path][$typeName])) {
