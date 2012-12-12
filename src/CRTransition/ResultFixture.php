@@ -30,7 +30,7 @@ class ResultFixture
         if (isset($this->yaml['shared'])) {
             return $this->yaml['shared'][$name];
         }
-        throw new Exception("Neither {$this->testName} nor 'shared' fixture found");
+        throw new \Exception("Neither {$this->testName} nor 'shared' fixture found");
     }
 
     private function getYamlTypeKeyByName($type, $name)
