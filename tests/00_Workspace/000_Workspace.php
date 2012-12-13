@@ -33,6 +33,9 @@ class WorkspaceTest extends RakiTest
         $rf = self::getFixture(__FUNCTION__);
         $names = $rf->getWorkspaceNames();
         $dName = $this->manager->getDefaultWorkspaceName();
+        if (!isset($names[$this->manager->getDefaultWorkspaceName()])) {
+            return;
+        }
         $wsName = key($names[$this->manager->getDefaultWorkspaceName()]);
         $ws = $this->manager->getStoredWorkspaceByPath($dName);
         $this->manager->createWorkspace($wsName, $ws);
@@ -44,6 +47,9 @@ class WorkspaceTest extends RakiTest
         $rf = self::getFixture(__FUNCTION__);
         $names = $rf->getWorkspaceNames();
         $dName = $this->manager->getDefaultWorkspaceName();
+        if (!isset($names[$this->manager->getDefaultWorkspaceName()])) {
+            return;
+        }
         $wsName = key($names[$this->manager->getDefaultWorkspaceName()]);
         $ws = $this->manager->getStoredWorkspaceByPath('/' . $dName . '/' . $wsName);
         $next = next($names[$this->manager->getDefaultWorkspaceName()]);
