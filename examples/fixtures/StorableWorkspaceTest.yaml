@@ -1,0 +1,60 @@
+
+# test workspaces' names available in  repository 
+
+testGetName:
+    workspace:
+        names:
+            - A
+            - B
+            - c
+            - D
+            - E
+
+# test workspaces' names and their children
+
+testGetChildrenNames:
+    workspace:
+        names:
+            - A
+            - B
+            - c
+            - D
+            - E
+
+# Workspace B is child of A
+# c is child of B
+# D and E are children  of c
+# D and E do not have children
+
+        children:
+            A:
+                - B
+            B:
+                - c
+            c:
+                - D
+                - E
+            D: []
+            E: []
+
+# the same rules as above
+# in test itself, we also check objects 
+
+testGetChildren:
+    workspace:
+        names:
+            - A
+            - B
+            - c
+            - D
+            - E
+        children:
+            A:
+                - B
+            B:
+                - c
+            c:
+                - D
+                - E
+            D: []
+            E: []

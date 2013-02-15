@@ -1,0 +1,36 @@
+
+# common result shared among test
+
+shared:
+
+# expect  workspaces at given pathhs
+
+    workspace:
+        paths:
+            - /A
+            - /A/B
+            - /A/B/c
+            - /A/B/c/D
+            - /A/B/c/E
+
+# if the tree is not built by the implementation, define names as paths
+
+        paths:
+            - /A
+            - /B
+            - /c
+            - /D
+            - /E
+
+# test if item exist
+
+        items:
+
+# in workspace 'A' expect item of type 'TypeA' 
+# check if properties values match defined ones
+            /A:
+                TypeA:
+                    SomeName:
+                        name: SomeName
+                        title: SomeTitle
+

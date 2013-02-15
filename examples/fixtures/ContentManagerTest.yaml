@@ -1,0 +1,84 @@
+
+# common, shared among all tests
+
+shared:
+    types:
+
+# expect defined types
+# these, should be available in repository
+
+        possible:
+            - TypeA
+            - TypeB
+            - TypeC
+
+# these, should be available as stored ones
+
+        stored:
+            - TypeA
+            - TypeB
+
+# expect workspaces at defoned paths
+
+    workspace:
+        paths:
+            - /A
+            - /A/B
+
+# if workspaces layout is flat, set paths built from names
+
+        paths:
+            - /A
+            - /B
+
+# expect workspaces names (built as tree in this case)
+
+        names:
+            A:
+                B: []
+
+# or flat ones
+
+        names:
+            A: []
+            B: []
+
+# test if items exist
+
+testZGetItemByPath:
+
+# expect workspaces at paths
+
+    workspace:
+        paths:
+            - /A
+            - /A/B
+            - /A/B/c
+            - /A/B/c/D
+            - /A/B/c/E
+
+# expect items at paths
+
+        items:
+
+# in workspace 'A' expect item of type 'TypeA' named 'SomeName'
+
+            /A:
+                TypeA:
+                    SomeName: []
+
+# do not expect anything in workspace  /A/B
+
+            /A/B: []
+
+# in case of flat workspaces' layout
+
+            /A: []
+            /B: []
+
+# in workspace '/A/B/c/D/' expect item of type 'TypeB' named 'SomeOtherName'
+
+            /A/B/c/D: 
+                TypeB:
+                    SomeOtherName: []
+

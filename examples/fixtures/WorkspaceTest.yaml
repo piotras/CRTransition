@@ -1,0 +1,47 @@
+# 'shared' will be used by every test
+
+shared:
+
+# we expect  workspace objects
+
+    workspace:
+
+# at given  paths
+
+        paths:
+            - '/A'
+            - '/A/B'
+            - '/A/B/c'
+            - '/A/B/c/D'
+            - '/A/B/c/E'
+
+# and we expect workspaces with defined names which build the tree
+# 'D' and 'E' do not have  children
+
+        names:
+            A:
+                B:
+                    c:
+                        D: []
+                        E: []
+
+# for flat layout,define names only
+
+        names:
+            A: []
+            B: []
+            C: []
+
+
+# structure's name is the same as test's one
+# it'll be used by that test only
+
+testGetStoredWorkspaceByName:
+
+# and we test workspaces names
+
+    workspace:
+        names:
+            - A
+            - B
+            - C
