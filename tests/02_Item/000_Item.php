@@ -61,7 +61,7 @@ class StorableItemTest extends RakiTest
                     $this->assertInstanceOf("\CRTransition\StorableItem", $item);
                     foreach ($props as $name => $value) {
                         //echo "PROPERTY {$name} : {$item->getProperty($name)} \n";
-                        $this->assertEquals($value, $item->getProperty($name), "Type {$type} at {$path}/{$itemPath}");
+                        $this->assertEquals($value, $item->getProperty($name), "Type {$type} at {$path}/{$itemPath}, property {$name}.");
                     }
                 }
             }
