@@ -41,7 +41,7 @@ class StorableItemTest extends RakiTest
                     $ws = $this->workspaceManager->getStoredWorkspaceByPath($path);
                     $item = $this->manager->getItemByPath($ws, $type, $itemPath);
                     $this->assertInstanceOf("\CRTransition\StorableItem", $item);
-                    $this->assertEquals($props['name'], $item->getName());
+                    $this->assertEquals($props['name'], $item->getName(), "Type {$type} at {$path}/{$itemPath}");
                 }
             }
         }
@@ -61,7 +61,7 @@ class StorableItemTest extends RakiTest
                     $this->assertInstanceOf("\CRTransition\StorableItem", $item);
                     foreach ($props as $name => $value) {
                         //echo "PROPERTY {$name} : {$item->getProperty($name)} \n";
-                        $this->assertEquals($value, $item->getProperty($name));
+                        $this->assertEquals($value, $item->getProperty($name), "Type {$type} at {$path}/{$itemPath}");
                     }
                 }
             }
