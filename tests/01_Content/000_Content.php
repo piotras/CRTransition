@@ -55,7 +55,7 @@ class ContentManagerTest extends RakiTest
                 foreach ($itemPaths as $itemPath => $properties) {
                     $ws = $this->workspaceManager->getStoredWorkspaceByPath($path);
                     $item = $this->manager->getItemByPath($ws, $type, $itemPath);
-                    $this->assertInstanceOf("\CRTransition\StorableItem", $item, "Type: '{$type}' at path: '{$itemPath}'");
+                    $this->assertInstanceOf("\CRTransition\StorableItem", $item, "Type: '{$type}' at path: '{$itemPath}', workspace '{$path}'");
                 }
             }
         }
